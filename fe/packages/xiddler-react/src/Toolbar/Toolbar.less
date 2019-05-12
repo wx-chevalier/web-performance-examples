@@ -1,0 +1,51 @@
+@controlbgColor: #f9f9f9;
+@textColor: #666;
+@readyBtnColor: #53c398;
+@recordingBtnColor: #fc615d;
+
+.app-component-xidder-toolbar {
+  width: 320px;
+  cursor: pointer;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-right: 8px;
+  border-radius: 4px;
+  margin-top: 16px;
+  padding-left: 60px;
+  font-size: 12px;
+  color: @textColor;
+  background: @controlbgColor;
+
+  .record-button {
+    position: absolute;
+    bottom: 4px;
+    left: 16px;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: @readyBtnColor;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 11px;
+      right: 11px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: 1s all;
+    }
+
+    &.recording {
+      background-color: @recordingBtnColor;
+
+      &::before {
+        border-radius: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@leftWidth: 400px;
+
+.app-component-xidder-network-panel {
+  max-height: 320px;
+  overflow: auto;
+
+  > .toolbar {
+    margin-bottom: 16px;
+  }
+
+  > .content {
+    display: flex;
+  }
+
+  &-empty {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-list {
+    flex: @leftWidth 0 0;
+    margin-right: 16px;
+
+    .record-item {
+      width: @leftWidth;
+
+      cursor: pointer;
+
+      &--selected {
+        background-color: #e1effe;
+      }
+    }
+  }
+
+  &-info {
+    flex: 10px 1 1;
+    overflow: auto;
+
+    &-empty {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      flex: 10px 1 1;
+    }
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .label {
+      text-align: right;
+      padding-right: 16px;
+      font-weight: bolder;
+
+      &:after {
+        content: ':';
+      }
+    }
+  }
+}

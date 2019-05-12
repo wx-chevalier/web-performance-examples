@@ -1,0 +1,46 @@
+.app-component-xidder-dashboard {
+  width: 100vw;
+  height: 400px;
+
+  position: fixed;
+  bottom: 0;
+  padding: 16px;
+  padding-top: 0px;
+
+  transform: translateY(400px);
+  transition: 1s all;
+  background: white;
+  box-shadow: 0px 10px 20px 10px rgba(135, 134, 134, 0.5);
+
+  overflow: hidden;
+
+  &--visible {
+    transform: translateY(0px);
+  }
+
+  &-tip {
+    border: 1px solid #7ae4ff;
+    background-color: #e6fcff;
+    width: calc(100% - 50px);
+    top: 65px;
+  }
+
+  &-actions {
+    position: absolute;
+
+    right: 16px;
+    top: 12px;
+
+    cursor: pointer;
+
+    > i {
+      font-size: 25px;
+      margin-right: 8px;
+    }
+
+    .anticon-cross,
+    .anticon-caret-right {
+      transform: scale(0.8);
+    }
+  }
+}
